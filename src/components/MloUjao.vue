@@ -14,17 +14,14 @@
 import { Vue } from "vue-class-component";
 import mlo from "../lib/ujao";
 export default class MloUjao extends Vue {
-  data() {
-    return {
-      mloNext: {},
-    };
-  }
   getUjao(): any {
     const food = new mlo();
     return food.ujao();
   }
   mounted() {
-    this.mloNext = this.getUjao();
+    let mloNext = [];
+    mloNext = this.getUjao();
+    return mloNext;
   }
 }
 </script>
